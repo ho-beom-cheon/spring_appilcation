@@ -60,6 +60,16 @@ public class HelloControllerTest {
         String name = "hello";
         int amount = 1000;
 
+        /*
+        * [param]
+        * API 테스트할 때 사용될 파라미터를 설정한다.
+        * 단 값은 String 만 허용한다.
+        * 숫자/날짜 등의 데이터도 등록할때는 문자열로 변경해야만 가능한다.
+        *
+        * [jsonPath]
+        * JSON 응답값을 필드별로 검증할 수 있는 메소드
+        * $를 기준으로 필드명을 명시합니다.
+        * */
         mvc.perform(
                 get("/hello/dto")
                         .param("name", name)
